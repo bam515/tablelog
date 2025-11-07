@@ -25,8 +25,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
 
-            // super_admin | owner | staff
-            $table->string('role')->default('owner');
+            // super_admin | owner | staff | customer
+            $table->string('role')->default('customer');
 
             $table->rememberToken();
             $table->timestamps();
